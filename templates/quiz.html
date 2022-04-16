@@ -1,18 +1,19 @@
-{% extends "quiz_layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <script>
     let info = {{info|tojson}} 
-    let previous_choice = {{previous_choice|tojson}}
     console.log(info)
 </script>
 
 <h1 class="question">{{info["question"]}}</h1>
 <img class="media_source" src={{info["media"]}} alt="Image of greeting" width="200" height="200"></img>    
 <div id="answer_choices"></div>
+<div id="feedback"></div>
 <button id="next" type="button">Next</button>
+<div id="points_calculator"></div>
 
 <div id="example_block"></div>
 

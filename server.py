@@ -85,36 +85,27 @@ def add_name():
     #send back the WHOLE array of data, so the client can redisplay it
     return jsonify(data = data)
 
-@app.route('quiz', methods=['GET', 'POST'])
-def answer_quiz(quiz_response=None):
+@app.route('/quiz/<id_num>', methods=['GET', 'POST'])
+def answer_quiz(id_num=None):
     global quiz
 
     json_data = request.get_json()
-    id_num = json_data["id_num"]
-    idx = int(id_num) - 1
-    choice = json_data["choice"]
-    points = json_data["points"]
-
-    if choice == quiz[idx]["correct_answer"]:
-        #Set up the points
-        if quiz[idx]["tries"] == "1":
-            if idx == 0:
-                quiz[idx]["points"] = "0"
-            else:
-                quiz[idx]["points"] = quiz[idx-1]["points"]
-        elif quiz[idx]["tries"] == "1":
-            quiz[idx]["points"] = str(int(quiz[idx][points]) + 100)
-        elif quiz[idx]["tries"] == "2":
-            quiz[idx]["points"] = str(int(quiz[idx][points]) + 50)
-        elif quiz[idx]["tries"] == "3":
-            quiz[idx]["points"] = str(int(quiz[idx][points]) + 10)
-        else:
-           quiz[idx]["points"] = quiz[idx]["points"]
-
+    if json_data is not None:
+        id_num = json_data["id"]
+        idx = int(id_num) - 1
+        new_idx = int(json_data["next_question"]) - 1
+        quiz[idx] = json_data
     else:
-        previous_choice = {'choice': choice, 'right': 'no'}
+        idx = int(id_num)
+        new_idx = int(id_num) - 1
+        return render_template('quiz.html', info=quiz[new_idx])
 
-    return render_template('question.html', info=quiz[idx], previous_choice=previous_choice)
+    if new_idx == 0:
+        quiz[new_idx]["points"] = "0"
+    else:
+        quiz[new_idx]["points"] = quiz[new_idx-1]["points"]
+
+    return jsonify(info=quiz[new_idx])
 
  
 
