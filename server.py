@@ -16,6 +16,29 @@ data = [
     },
 ]
 
+quiz = [
+    {
+        "id": "1",
+        "question": "Click the area this custom corresponds to",
+        "answers": ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
+        "correct_answer": "New Zealand",
+        "media": "https://www.nzmanukagroup.com/files/cache/1d6f5c65ebb8a79e68ac15b033fc34a4_f45.jpg",
+        "points": "0",
+        "chosen_answer": "",
+        "tries": "0",
+        "next_question": "2"
+    }, {
+        "id": "2",
+        "question": "Click the country this custom matches",
+        "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
+        "correct_answer": "Japan",
+        "chosen_answer": "",
+        "media": "https://c.tenor.com/GBGNBFPsDV4AAAAC/bow-japanese.gif",
+        "points": "0",
+        "tries": "0",
+        "next_question": "3"
+    }
+    ]   
 # ROUTES
 
 @app.route('/hi')
@@ -61,6 +84,38 @@ def add_name():
 
     #send back the WHOLE array of data, so the client can redisplay it
     return jsonify(data = data)
+
+@app.route('quiz', methods=['GET', 'POST'])
+def answer_quiz(quiz_response=None):
+    global quiz
+
+    json_data = request.get_json()
+    id_num = json_data["id_num"]
+    idx = int(id_num) - 1
+    choice = json_data["choice"]
+    points = json_data["points"]
+
+    if choice == quiz[idx]["correct_answer"]:
+        #Set up the points
+        if quiz[idx]["tries"] == "1":
+            if idx == 0:
+                quiz[idx]["points"] = "0"
+            else:
+                quiz[idx]["points"] = quiz[idx-1]["points"]
+        elif quiz[idx]["tries"] == "1":
+            quiz[idx]["points"] = str(int(quiz[idx][points]) + 100)
+        elif quiz[idx]["tries"] == "2":
+            quiz[idx]["points"] = str(int(quiz[idx][points]) + 50)
+        elif quiz[idx]["tries"] == "3":
+            quiz[idx]["points"] = str(int(quiz[idx][points]) + 10)
+        else:
+           quiz[idx]["points"] = quiz[idx]["points"]
+
+    else:
+        previous_choice = {'choice': choice, 'right': 'no'}
+
+    return render_template('question.html', info=quiz[idx], previous_choice=previous_choice)
+
  
 
 
