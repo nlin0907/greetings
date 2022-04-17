@@ -97,6 +97,42 @@ quiz = [
         "additions": ["Which of these two Japanese “goodbyes” is most formal?", "1", "media/formal", "2", "media/informal"],
         "points": "0",
         "tries": "0",
+        "next_question": "8"
+    },
+    {
+        "id": "8",
+        "question": "Consider the following:",
+        "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
+        "correct_answer": "Tibet",
+        "media": "https://www.homeexchange.com/blog/content/images/2020/03/GettyImages-585181460.jpg",
+        "media_type": "image",
+        "additions": ["You’re visiting a town, and a child comes up to greet you like this. Where are you most likely?"],
+        "points": "0",
+        "tries": "0",
+        "next_question": "9"
+    },
+    {
+        "id": "9",
+        "question": "Listen to the audios and respond to the question below:",
+        "answers":  ["Audio 1", "Audio 2"],
+        "correct_answer": "Audio 1",
+        "media": "",
+        "media_type": "audio array",
+        "additions": ["The following are Tibetian greetings. Which one corresponds to “Tashi delek”--hello?", "1", "/media/hello", "2", "/media/other"],
+        "points": "0",
+        "tries": "0",
+        "next_question": "10"
+    },
+    {
+        "id": "10",
+        "question": "Listen to the audios and respond to the question below:",
+        "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
+        "correct_answer": "New Zealand",
+        "media": "",
+        "media_type": "audio array",
+        "additions": ["Click on the incorrect pairing of greetings", "Spain", "/media/spain", "Yemen", "/media/yemen", "Japan", "/media/japan", "Tibet", "/media/tibet", "New Zealand", "/media/notnz"],
+        "points": "0",
+        "tries": "0",
         "next_question": "-1"
     }
     ]   
