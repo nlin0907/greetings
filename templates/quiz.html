@@ -9,7 +9,15 @@
 </script>
 
 <h1 class="question">{{info["question"]}}</h1>
-<img class="media_source" src={{info["media"]}} alt="Image of greeting" width="200" height="200"></img>    
+{% if info["media_type"]=="image" %}
+    <img class="media_source" src={{info["media"]}} alt="Image of greeting" width="200" height="200"></img>  
+{% elif info["media_type"]=="text" %}
+    <div class="media_source">{{info["media"]}}</div>
+{% elif info["media_type"]=="audio" %}
+    <audio controls>
+        <source src="voice.mpg" type="audio/mpeg">
+    </audio>
+{% endif %}
 <div id="answer_choices"></div>
 <div id="feedback"></div>
 <button id="next" type="button">Next</button>

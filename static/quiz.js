@@ -1,9 +1,38 @@
 function goToNext(total_points, idx){
     info["points"] = total_points
     curridx = idx
-    console.log(info)
-    submit_question(info)
+    if(parseInt(info["next_question"])==-1){
+        goToResults(total_points);
+    }
+    else{
+        console.log(info)
+        submit_question(info)
+    }
 }
+
+function goToResults(points){
+    new_num = info["next_question"]
+        $.ajax({
+            type: "POST",
+            url: "/quiz/" + new_num,                
+            dataType : "json",
+            contentType: "application/json; charset=utf-8",
+            data : JSON.stringify(info),
+            success: function(result){
+                let all_data = result["info"]
+                console.log("all data", all_data)
+                info = all_data
+                console.log(info)
+                window.location.replace("/results", info=info)
+            },
+            error: function(request, status, error){
+                console.log("Error");
+                console.log(request)
+                console.log(status)
+                console.log(error)
+            }
+        });
+    }
 
 function submit_question(info){
     new_num = info["next_question"]
@@ -33,6 +62,7 @@ function submit_question(info){
 $(document).ready(function(){
 
     console.log(info["correct_answer"])
+    $('#next').prop('disabled', true)
     total_points = info["points"]
     tries = 0
     if(info["id"]=="1"){
@@ -78,6 +108,7 @@ $(document).ready(function(){
                 $("#feedback").css('color','#4FC978')
             }
             $('.ans_option').prop('disabled', true)
+            $('#next').prop('disabled', false)
             total_points = String(parseInt(total_points) + points)
             $("#points_calculator").text(total_points+"/1000")
             console.log(points)
@@ -86,6 +117,7 @@ $(document).ready(function(){
             $(this).css('background-color','#D21404')
             $("#feedback").text("Try again")
             $("#feedback").css('color','#D21404')
+            $('#next').prop('disabled', true)
         }
 
     })
