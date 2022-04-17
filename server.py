@@ -3,19 +3,6 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
-
-current_id = 2
-data = [
-    {
-        "id": 1,
-        "name": "michael scott"
-    },
-    {
-        "id": 2,
-        "name": "jim halpert"
-    },
-]
-
 quiz = [
     {
         "id": "1",
@@ -135,52 +122,88 @@ quiz = [
         "tries": "0",
         "next_question": "-1"
     }
-    ]   
+    ]
+
+
+learn = [
+{
+    "id": "1",
+    "country": "Spain",
+    "hello_description": ["Touch your right cheeks together and make a kissing sound, then repeat the process on the left side"],
+    "hello": [" “Hola” (O-la, Hello)", " “Ey” (Ey, hello) "],
+    "hello_media": [" media/pronunciation_es_hola.mp3"],
+    "goodbye_description": ["If female: Use the touching cheeks gesture.","If male: typical to shake hands."],
+    "goodbye": [" “Adios” (Ah-dee-os, goodbye)", " “Hasta luego” (Hasta lu-ego, see you tomorrow)  "],
+    "goodbye_media": ["media/pronunciation_es_adiós.mp3", "media/pronunciation_es_hasta_luego.mp3"],
+    "next_question": "2"
+}, {
+    "id": "2",
+    "country": "Yemen",
+    "hello_description": [" If male: Shake hands with male Muslims. Some may not shake hands with non-Muslims. If female: Avoid shaking hands due to religious restrictions for them. "],
+    "hello": [" “marhaba” (Hello) ", " “As-Salam-u-Alaikum” (Peace by unto you) "],
+    "hello_media": [" media/arabicwelcome.mp3", " media/Ar-السلام_عليكم.oga"],
+    "goodbye_description": ["You can say the Salam greeting when arriving and leaving a gathering."],
+    "goodbye": [" “ma'a as-salaama” (goodbye)"],
+    "goodbye_media": ["media/pronunciation_es_adiós.mp3"],
+    "next_question": "3"
+}, {
+    "id": "3",
+    "country": "Japan",
+    "hello_description": [" Bow from the waist with 45-degrees, with deeper bows to be more formal/respectful. Address everybody in the group, not one single greeting."],
+    "hello": [" “こんにちは” (Kon'nichiwa, good afternoon, for semi-formal settings) ", " “やあ”(Ya, hey, exclamation/informal settings) "],
+    "hello_media": [" media/pronunciation_ja_こんにちは.mp3", " media/pronunciation_ja_じゃあね.mp3"],
+    "goodbye_description": [],
+    "goodbye": [" “さようなら” (Saiyonnara, goodbye)", "“じゃあね” (Ja ne, see you)"],
+    "goodbye_media": ["media/pronunciation_ja_さようなら.mp3"],
+    "next_question": "4"
+},{
+    "id": "4",
+    "country": "New Zealand",
+    "hello_description": ["Monks stick out their tongues as a sign of respect or agreement.", "Many press the hands together and place them in front of their chest to show that they “come in peace”."],
+    "hello": ["“Tashi delek” (Good fortune, hello)"],
+    "hello_media": ["media/pronunciation_bo_བཀྲ་ཤིས་བདེ་ལེགས།.mp3"],
+    "goodbye_description": [],
+    "goodbye": ["“Kah-leh phe” (Goodbye)", "“Jeh yong” (See you later)"],
+    "goodbye_media": ["media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3"],
+    "next_question": "5"
+
+},{
+    "id": "5",
+    "country": "Tibet",
+    "hello_description": ["Hugs and shake hands with eye contact.", "Do not call someone over by yelling “Oi”.", "Maōri greet by pressing noses together."],
+    "hello": ["“Kia ora!” (Hi)", "“Teh-nah kweh” (formal, hello)", "“Kia ora, bro!” (Hi, mate)", "“gidday!”"],
+    "hello_media": ["media/pronunciation_mi_kia_ora.mp3", "pronunciation_mi_tēnā_koe.mp3"],
+    "goodbye_description": [],
+    "goodbye": ["“Haere rā ” (formal, goodbye)", "“Kia ora” (informal)"],
+    "goodbye_media": ["media/pronunciation_mi_kia_ora.mp3"],
+    "next_question": "-1"
+}] 
+
 # ROUTES
-
-@app.route('/hi')
-def hello():
-   return 'Hi hi hi hi hi hi hi hi hi'
-
 
 @app.route('/')
 def hello_world():
    return render_template('hello_world.html')   
 
 
-@app.route('/hello/<name>')
-def hello_name(name=None):
-    return render_template('hello_name.html', name=name) 
-
-
-@app.route('/people')
-def people():
-    return render_template('people.html', data=data)  
-
-
 # AJAX FUNCTIONS
+@app.route('/learn/<id_num>', methods=['GET', 'POST'])
+def learn(id_num=None):
+    global learn
 
-# ajax for people.js
-@app.route('/add_name', methods=['GET', 'POST'])
-def add_name():
-    global data 
-    global current_id 
+    json_data = request.get_json()
+    if json_data is not None:
+        id_num = json_data["id"]
+        idx = int(id_num) - 1
+        new_idx = int(json_data["next_question"]) - 1
+        print("first", learn[idx])
+        learn[idx] = json_data
+        print("second", learn[idx])
+    else:
+        idx = int(id_num)
+        new_idx = int(id_num) - 1
+        return render_template('learn.html', info=learn[new_idx])
 
-    json_data = request.get_json()   
-    name = json_data["name"] 
-    
-    # add new entry to array with 
-    # a new id and the name the user sent in JSON
-    current_id += 1
-    new_id = current_id 
-    new_name_entry = {
-        "name": name,
-        "id":  current_id
-    }
-    data.append(new_name_entry)
-
-    #send back the WHOLE array of data, so the client can redisplay it
-    return jsonify(data = data)
 
 @app.route('/quiz/<id_num>', methods=['GET', 'POST'])
 def answer_quiz(id_num=None):

@@ -2,8 +2,76 @@
 
 {% block content %}
 
-<h1>Learn greetings for five different countries!</h1>
-<a href="/learn"><button type="button">Learn</button></a>
-<a href="/quiz/1"><button type="button">Quiz</button></a>
+<script type="text/javascript" src="{{ url_for('static', filename = 'homepage.js') }}"></script>
+    
+    <script>
+        let data = {{data|tojson}} 
+        console.log(data)
+    </script>
+    <style>
+    	.col-md-4{
+    		background-color: pink;
+    	}
+    	.container{
+    		background-color: lightgrey;
+    	}
+
+
+    	.btn-primary{
+    		width: 100%; 
+    		border:none; 
+    		display:inline-block; 
+    		color:white;
+    	}
+    	#options{
+    		padding-bottom: 100px;
+    	}
+
+    	img{
+    		 width: 100%;
+  			height: auto;
+    	}
+
+
+
+
+    </style>
+
+
+<body>
+	<div class="container">
+    	<div class="row">
+    		<div class="col-6"><img src="https://images-na.ssl-images-amazon.com/images/I/91WXDfyZ9KL.jpg"></div>
+ 
+			<div class="col-md-6 justify-content-center">
+
+					<h4>Learn some basic greetings around the world!</h4>
+					<div class="col-md-6">
+						<a class="btn btn-primary btn-lg" href="/learn/1">Spain</a>
+					</div>
+					<div class="col-md-6">
+						<a href="/learn/2" class="btn btn-primary btn-lg">Yemen</a>
+					</div>
+					<div class="col-md-6">
+						<a href="/learn/3" type="button" class="btn btn-primary btn-lg">Japan</a>
+					</div>
+					<div class="col-md-6">
+						<a href="/learn/4" class="btn btn-primary btn-lg">New Zealand</a>
+					</div>
+					<div class="col-md-6">
+						<a href="/learn/5" type="button" class="btn btn-primary btn-lg">Tibet</a>
+					</div>
+					<div class="col-md-6">
+						<a href="/quiz"class="btn btn-primary btn-lg">Quiz</a>
+					</div>
+
+			</div>
+    		
+		</div>
+
+	</div>
+   
+</body>
+
 
 {% endblock %}
