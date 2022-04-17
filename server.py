@@ -24,6 +24,7 @@ quiz = [
         "correct_answer": "New Zealand",
         "media": "https://www.nzmanukagroup.com/files/cache/1d6f5c65ebb8a79e68ac15b033fc34a4_f45.jpg",
         "media_type": "image",
+        "additions": [],
         "points": "0",
         "tries": "0",
         "next_question": "2"
@@ -34,6 +35,7 @@ quiz = [
         "correct_answer": "Japan",
         "media": "https://c.tenor.com/GBGNBFPsDV4AAAAC/bow-japanese.gif",
         "media_type": "image",
+        "additions": [],
         "points": "0",
         "tries": "0",
         "next_question": "3"
@@ -45,6 +47,54 @@ quiz = [
         "correct_answer": "Japan",
         "media": "You should avoid eye contact in conversations",
         "media_type": "text",
+        "additions": [],
+        "points": "0",
+        "tries": "0",
+        "next_question": "4"
+    },
+    {
+        "id": "4",
+        "question": "Select the area where you would hear the following words:",
+        "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
+        "correct_answer": "Yemen",
+        "media": "media/arabicwelcome.mp3",
+        "media_type": "audio",
+        "additions": ["ٱلسَّلَامُ عَلَيْكُمْ as-salāmu ʿalaykum"],
+        "points": "0",
+        "tries": "0",
+        "next_question": "5"
+    },{
+        "id": "5",
+        "question": "Click the situation this custom matches",
+        "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
+        "correct_answer": "Spain",
+        "media": "https://letsbuyinspain.com/wp-content/uploads/2016/08/cheek-kiss-greeting-e1450117959995-1024x666.jpg",
+        "media_type": "image",
+        "additions": [],
+        "points": "0",
+        "tries": "0",
+        "next_question": "6"
+    },
+    {
+        "id": "6",
+        "question": "Consider the following scenario",
+        "answers":  ["Shake her hand", "Bow", "Say As-Salam-u-Alaikum", "Rub your nose against hers"],
+        "correct_answer": "Say As-Salam-u-Alaikum",
+        "media": "https://media.gettyimages.com/photos/happy-arabic-girl-picture-id154917566?s=612x612",
+        "media_type": "image",
+        "additions": ["You’re in Yemen, and are introduced to your friend Abbud’s wife. How do you greet her?"],
+        "points": "0",
+        "tries": "0",
+        "next_question": "7"
+    },
+    {
+        "id": "7",
+        "question": "Listen to the audios and respond to the question below",
+        "answers":  ["Audio 1", "Audio 2"],
+        "correct_answer": "Audio 1",
+        "media": "",
+        "media_type": "audio array",
+        "additions": ["Which of these two Japanese “goodbyes” is most formal?", "1", "media/formal", "2", "media/informal"],
         "points": "0",
         "tries": "0",
         "next_question": "-1"

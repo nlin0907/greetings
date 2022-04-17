@@ -62,6 +62,30 @@ function submit_question(info){
 $(document).ready(function(){
 
     console.log(info["correct_answer"])
+
+    if(info["additions"].length!=0){
+        if(info["media_type"]=="audio array"){
+            $.each(info["additions"], function(i, item){
+                if(i==0){
+                    let new_topic= $("<div>"+item+"</div>")
+                    $("#additional").append(new_topic)
+                }
+                else if(i%2!=0){
+                    let new_topic= $("<div>"+item+"</div>")
+                    $("#additional").append(new_topic)
+                }
+                else{
+                    let new_topic= $("<audio controls><source src="+item+"type='audio/mp3'></audio>")
+                    $("#additional").append(new_topic)
+                }
+            })
+        }
+        else{
+            let new_topic= $("<div>"+info["additions"][0]+"</div>")
+            $("#additional").append(new_topic)
+        }
+    }
+
     $('#next').prop('disabled', true)
     total_points = info["points"]
     tries = 0
