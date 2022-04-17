@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'homepage.js') }}"></script>
+	<script>
+	    let id = {{id|tojson}} 
+	    console.log(id)
+	</script>
+    
+    <style>
+
+    	.container{
+    		background-color: lightgrey;
+    	}
+
+    	#country_name{
+    		text-align: center;
+    	}
+
+
+
+
+    </style>
+
+
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 id="country_name">Japan</h1>
+		</div>
+    	<div class="row">
+    		<div class="col">
+    			<div class="jumbotron">
+	    			<h3>Hello</h3>
+	    			<div class="row" id="hello_content">this is the info</div>
+	    			<div class="row" id="hello_media">this is the media</div>
+	    			
+    			</div>
+    		<div class="row">
+			<div class="col-md-6">
+				<a href="/learn/{{id}}"class="btn btn-primary btn-lg">Previous</a>
+			</div>
+
+    	</div>
+    			
+		</div>
+    		<div class="col">
+				<div class="jumbotron">
+	    			<h3>Goodbye</h3>
+	    			<div class="row" id="goodbye_content">this is the info</div>
+	    			<div class="row" id="goodbye_media">this is the media</div>
+	    		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<a href="/learn/{{id}}"class="btn btn-primary btn-lg">Next</a>
+			</div>
+			
+		</div>
+    	</div>
+	</div>
+   
+</body>
+
+
+{% endblock %}
+
