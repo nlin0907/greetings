@@ -230,7 +230,7 @@ def answer_quiz(id_num=None):
     else:
         idx = int(id_num)
         new_idx = int(id_num) - 1
-    return render_template('quiz.html', info=quiz[new_idx])
+        return render_template('quiz.html', info=quiz[new_idx])
 
     print("points", quiz[idx]["points"])
     if new_idx == 0:
