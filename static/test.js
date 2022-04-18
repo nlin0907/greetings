@@ -18,7 +18,14 @@ function goPrev(){
 function hello() {
     $.each(learn["hello"], function(i,item){
         console.log(item)
-        let new_topic= $("<div>" + item + "</div>")
+        console.log(learn["hello_media"][i])
+        let new_topic = ""
+        if (learn["hello_media"][i] != null) {
+            new_topic= $("<div>" + item + '<audio controls> <source src="/' + learn["hello_media"][i]+ '" type="audio/mp3">' + "</div>")
+        }
+        else {
+            new_topic= $("<div>" + item + "</div>")
+        }
         $("#hello_content").append(new_topic)
     })
 }
@@ -29,6 +36,7 @@ function goodbye() {
         let new1= $("<div>"+item1+"</div>")
         $("#goodbye_content").append(new1)
     })
+    
 }
 
 function hello_description() {
