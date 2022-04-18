@@ -144,24 +144,26 @@ learn = [
     "id": "1",
     "country": "Spain",
     "hello_description": ["Touch your right cheeks together and make a kissing sound, then repeat the process on the left side"],
-    "hello": [" “Hola” (O-la, Hello)", " “Ey” (Ey, hello) "],
+    "hello": ["“Hola” (O-la, Hello)", "“Ey” (Ey, hello) "],
     "hello_media": [" media/pronunciation_es_hola.mp3"],
     "goodbye_description": ["If female: Use the touching cheeks gesture.","If male: typical to shake hands."],
-    "goodbye": [" “Adios” (Ah-dee-os, goodbye)", " “Hasta luego” (Hasta lu-ego, see you tomorrow)  "],
+    "goodbye": ["“Adios” (Ah-dee-os, goodbye)", "“Hasta luego” (Hasta lu-ego, see you tomorrow)  "],
     "goodbye_media": ["media/pronunciation_es_adiós.mp3", "media/pronunciation_es_hasta_luego.mp3"],
     "next_question": "2",
-    "prev_question": "-1"
+    "prev_question": "-1",
+    "video": "https://www.youtube.com/watch?v=cpvQzjJ5Zw4"
 }, {
     "id": "2",
     "country": "Yemen",
     "hello_description": [" If male: Shake hands with male Muslims. Some may not shake hands with non-Muslims. If female: Avoid shaking hands due to religious restrictions for them. "],
-    "hello": [" “marhaba” (Hello) ", " “As-Salam-u-Alaikum” (Peace by unto you) "],
-    "hello_media": [" media/arabicwelcome.mp3", " media/Ar-السلام_عليكم.oga"],
+    "hello": [" “marhaba” (Hello) ", "“As-Salam-u-Alaikum” (Peace by unto you) "],
+    "hello_media": [" media/arabicwelcome.mp3", " media/Ar-السلام_عليكم.mp3"],
     "goodbye_description": ["You can say the Salam greeting when arriving and leaving a gathering."],
     "goodbye": [" “ma'a as-salaama” (goodbye)"],
     "goodbye_media": ["media/pronunciation_es_adiós.mp3"],
     "next_question": "3",
-    "prev_question": "1"
+    "prev_question": "1",
+    "video": ""
 }, {
     "id": "3",
     "country": "Japan",
@@ -172,7 +174,8 @@ learn = [
     "goodbye": [" “さようなら” (Saiyonnara, goodbye)", "“じゃあね” (Ja ne, see you)"],
     "goodbye_media": ["media/pronunciation_ja_さようなら.mp3"],
     "next_question": "4",
-    "prev_question": "2"
+    "prev_question": "2",
+    "video": "https://www.youtube.com/watch?v=96q643XmB60"
 },{
     "id": "4",
     "country": "New Zealand",
@@ -183,7 +186,8 @@ learn = [
     "goodbye": ["“Kah-leh phe” (Goodbye)", "“Jeh yong” (See you later)"],
     "goodbye_media": ["media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3"],
     "next_question": "5",
-    "prev_question": "3"
+    "prev_question": "3",
+    "video": ""
 },{
     "id": "5",
     "country": "Tibet",
@@ -194,10 +198,12 @@ learn = [
     "goodbye": ["“Haere rā ” (formal, goodbye)", "“Kia ora” (informal)"],
     "goodbye_media": ["media/pronunciation_mi_kia_ora.mp3"],
     "next_question": "-1",
-    "prev_question": "4"
+    "prev_question": "4",
+    "video": "https://www.youtube.com/watch?v=Iajm9s1h-Ak"
 }] 
-# ROUTES
 
+
+# ROUTES
 
 @app.route('/')
 def hello_world():
