@@ -8,21 +8,43 @@
     console.log(info)
 </script>
 
-<h1 class="question">{{info["question"]}}</h1>
-<div id="additional"></div>
-{% if info["media_type"]=="image" %}
-    <img class="media_source" src={{info["media"]}} alt="Image of greeting" width="200" height="200"></img>  
-{% elif info["media_type"]=="text" %}
-    <div class="media_source">{{info["media"]}}</div>
-{% elif info["media_type"]=="audio" %}
-    <audio controls>
-        <source src={{info["media"]}} type="audio/mp3">
-    </audio>
-{% endif %}
-<div id="answer_choices"></div>
-<div id="feedback"></div>
-<button id="next" type="button">Next</button>
-<div id="points_calculator"></div>
+<h1 class="question middle">{{info["question"]}}</h1>
+<div id="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="additional"></div>
+            {% if info["media_type"]=="image" %}
+                <img class="media_source" src={{info["media"]}} alt="Image of greeting" width="500" height="400"></img>  
+            {% elif info["media_type"]=="text" %}
+                <div class="media_source">{{info["media"]}}</div>
+            {% elif info["media_type"]=="audio" %}
+                
+            
+                <audio controls>
+                <source src={{info["media"]}} type="audio/mp3">
+                </audio>
+            {% endif %}
+            <div id="points_calculator"></div>
+        </div>
+        <div class="col-md-3">
+            
+            <div id="answer_choices"></div>
+            <div id="feedback"></div>
+        </div>
+        <div class="col-md-1">
+            <div id="correct_mark"></div>
+        </div>
+        <div class="col-md-2">
+            <button id="next" type="button">Next</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 
 <div id="example_block"></div>
 

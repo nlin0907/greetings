@@ -57,7 +57,7 @@ quiz = [
         "question": "Select the area where you would hear the following words:",
         "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
         "correct_answer": "Yemen",
-        "media": "media/arabicwelcome.mp3",
+        "media": "/media/arabicwelcome.mp3",
         "media_type": "audio",
         "additions": ["ٱلسَّلَامُ عَلَيْكُمْ as-salāmu ʿalaykum"],
         "points": "0",

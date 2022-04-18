@@ -75,7 +75,9 @@ $(document).ready(function(){
                     $("#additional").append(new_topic)
                 }
                 else{
-                    let new_topic= $("<audio controls><source src="+item+"type='audio/mp3'></audio>")
+                    //let new_topic=$("<button type='button' value='" + item +"' class='play_audio'>"+"<img src='https://cdn1.iconfinder.com/data/icons/playback-controls/24/172-512.png'>"+"</button>")
+                    let new_topic= $("<audio controls><source src='http://localhost:5000/'"+item+"type='audio/mp3'></audio>")
+                    
                     $("#additional").append(new_topic)
                 }
             })
@@ -98,9 +100,12 @@ $(document).ready(function(){
     $.each(info["answers"], function(i, ans){
         let new_answer= $("<button type='button' value='" + ans +"' class='ans_option'>"+ans+"</button>")
         $("#answer_choices").append(new_answer)
+        $("#answer_choices").append($('</br>'))
+
+        $("#correct_mark").append()
     })
 
-    $("#points_calculator").text(info["points"]+"/1000")
+    $("#points_calculator").text("Points: "+info["points"]+"/1000")
 
     $(".ans_option").click(function(){     
         current_choice = $(this).attr("value")
@@ -108,6 +113,7 @@ $(document).ready(function(){
         tries += 1
         console.log(tries)
         if(current_choice == info["correct_answer"]){
+            
             $(this).css('background-color','#4FC978')
             console.log("TRIES!" + tries)
             if(tries==1){
@@ -134,7 +140,7 @@ $(document).ready(function(){
             $('.ans_option').prop('disabled', true)
             $('#next').prop('disabled', false)
             total_points = String(parseInt(total_points) + points)
-            $("#points_calculator").text(total_points+"/1000")
+            $("#points_calculator").text("Points: "+total_points+"/1000")
             console.log(points)
             
         }else{
