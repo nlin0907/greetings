@@ -6,6 +6,15 @@ function goToNext(){
         window.location.href="/learn/"+learn['next_question']
     }
 }
+
+function goPrev(){
+    if(parseInt(learn['prev_question'])==-1){
+        window.location.href="/"
+    } else{
+        window.location.href="/learn/"+learn['prev_question']
+    }
+}
+
 function hello() {
     $.each(learn["hello"], function(i,item){
         console.log(item)
@@ -53,5 +62,10 @@ $(document).ready(function(){
         }else{
             window.location.href="/learn/"+learn['next_question']
         }
+    })
+    
+    $("#prev").click(function(){     
+        console.log("picked prev")
+        goPrev()
     })
 })
