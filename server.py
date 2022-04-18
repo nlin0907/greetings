@@ -211,14 +211,16 @@ def hello_world():
 
 @app.route('/learn/<id>', methods=['GET', 'POST'])
 def learn_country(id=None, learn=learn):
-    json_data = request.get_json()
-    if json_data is not None:
-        id = json_data["id"]
-        idx = int(id) - 1
-        new_idx = int(json_data["next_question"]) - 1
-        print("first", learn[idx])
-        learn[idx] = json_data
-        print("second", learn[idx])
+   
+    if request.method=="POST":
+        json_data = request.get_json()
+        if json_data is not None:
+            id = json_data["id"]
+            idx = int(id) - 1
+            new_idx = int(json_data["next_question"]) - 1
+            print("first", learn[idx])
+            learn[idx] = json_data
+            print("second", learn[idx])
     else:
         idx = int(id)
         new_idx = int(id) - 1
@@ -228,15 +230,15 @@ def learn_country(id=None, learn=learn):
 @app.route('/quiz/<id_num>', methods=['GET', 'POST'])
 def answer_quiz(id_num=None):
     global quiz
-
-    json_data = request.get_json()
-    if json_data is not None:
-        id_num = json_data["id"]
-        idx = int(id_num) - 1
-        new_idx = int(json_data["next_question"]) - 1
-        print("first", quiz[idx])
-        quiz[idx] = json_data
-        print("second", quiz[idx])
+    if request.method=="POST":
+        json_data = request.get_json()
+        if json_data is not None:
+            id_num = json_data["id"]
+            idx = int(id_num) - 1
+            new_idx = int(json_data["next_question"]) - 1
+            print("first", quiz[idx])
+            quiz[idx] = json_data
+            print("second", quiz[idx])
     else:
         idx = int(id_num)
         new_idx = int(id_num) - 1
