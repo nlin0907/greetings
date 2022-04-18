@@ -149,7 +149,8 @@ learn = [
     "goodbye_description": ["If female: Use the touching cheeks gesture.","If male: typical to shake hands."],
     "goodbye": [" “Adios” (Ah-dee-os, goodbye)", " “Hasta luego” (Hasta lu-ego, see you tomorrow)  "],
     "goodbye_media": ["media/pronunciation_es_adiós.mp3", "media/pronunciation_es_hasta_luego.mp3"],
-    "next_question": "2"
+    "next_question": "2",
+    "prev_question": "-1"
 }, {
     "id": "2",
     "country": "Yemen",
@@ -159,7 +160,8 @@ learn = [
     "goodbye_description": ["You can say the Salam greeting when arriving and leaving a gathering."],
     "goodbye": [" “ma'a as-salaama” (goodbye)"],
     "goodbye_media": ["media/pronunciation_es_adiós.mp3"],
-    "next_question": "3"
+    "next_question": "3",
+    "prev_question": "1"
 }, {
     "id": "3",
     "country": "Japan",
@@ -169,7 +171,8 @@ learn = [
     "goodbye_description": [],
     "goodbye": [" “さようなら” (Saiyonnara, goodbye)", "“じゃあね” (Ja ne, see you)"],
     "goodbye_media": ["media/pronunciation_ja_さようなら.mp3"],
-    "next_question": "4"
+    "next_question": "4",
+    "prev_question": "2"
 },{
     "id": "4",
     "country": "New Zealand",
@@ -179,8 +182,8 @@ learn = [
     "goodbye_description": [],
     "goodbye": ["“Kah-leh phe” (Goodbye)", "“Jeh yong” (See you later)"],
     "goodbye_media": ["media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3"],
-    "next_question": "5"
-
+    "next_question": "5",
+    "prev_question": "3"
 },{
     "id": "5",
     "country": "Tibet",
@@ -190,7 +193,8 @@ learn = [
     "goodbye_description": [],
     "goodbye": ["“Haere rā ” (formal, goodbye)", "“Kia ora” (informal)"],
     "goodbye_media": ["media/pronunciation_mi_kia_ora.mp3"],
-    "next_question": "-1"
+    "next_question": "-1",
+    "prev_question": "4"
 }] 
 # ROUTES
 
