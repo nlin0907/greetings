@@ -1,6 +1,10 @@
 function goToNext(){
     console.log(parseInt(learn["id"]))
-    window.location.href="/quiz/id"
+    if(parseInt(learn['next_question'])==-1){
+        window.location.href="/quiz/1"
+    }else{
+        window.location.href="/learn/"+learn['next_question']
+    }
 }
 function hello() {
     $.each(learn["hello"], function(i,item){
@@ -44,6 +48,10 @@ $(document).ready(function(){
 
     $("#next").click(function(){     
         console.log("picked next")
-        window.location.href="/quiz/learn['id']"
+        if(parseInt(learn['next_question'])==-1){
+            window.location.href="/quiz/1"
+        }else{
+            window.location.href="/learn/"+learn['next_question']
+        }
     })
 })
