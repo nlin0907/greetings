@@ -1,5 +1,4 @@
 function goToNext(){
-    console.log(parseInt(learn["id"]))
     if(parseInt(learn['next_question'])==-1){
         window.location.href="/quiz/1"
     }else{
@@ -17,11 +16,11 @@ function goPrev(){
 
 function hello() {
     $.each(learn["hello"], function(i,item){
-        console.log(item)
         console.log(learn["hello_media"][i])
         let new_topic = ""
         if (learn["hello_media"][i] != null) {
-            new_topic= $("<div>" + item + '<audio controls> <source src="/' + learn["hello_media"][i]+ '" type="audio/mp3">' + "</div>")
+            new_topic= $("<div>" + item + '<audio controls> <source src="/static/'+learn["hello_media"][i]+ '"></audio>' + "</div>")
+            console.log("this is the div audio "+JSON.stringify(new_topic))
         }
         else {
             new_topic= $("<div>" + item + "</div>")
@@ -32,7 +31,6 @@ function hello() {
 
 function goodbye() {
     $.each(learn["goodbye"], function(i,item1){
-        console.log(item1)
         let new1= $("<div>"+item1+"</div>")
         $("#goodbye_content").append(new1)
     })
@@ -41,17 +39,13 @@ function goodbye() {
 
 function hello_description() {
     $.each(learn["hello_description"], function(i,item3){
-        console.log("here")
-        console.log(item3)
         let new_description= $("<div>"+item3+"</div>")
-        console.log("new_description:" + new_description)
         $("#hello_description").append(new_description)
     })
 }
 
 function goodbye_description() {
     $.each(learn["goodbye_description"], function(i,item){
-        console.log(item)
         let new_description= $("<div>" + item + "</div>")
         $("#goodbye_description").append(new_description)
     })
@@ -64,7 +58,6 @@ $(document).ready(function(){
     goodbye_description()
 
     $("#next").click(function(){     
-        console.log("picked next")
         if(parseInt(learn['next_question'])==-1){
             window.location.href="/quiz/1"
         }else{
@@ -73,7 +66,6 @@ $(document).ready(function(){
     })
     
     $("#prev").click(function(){     
-        console.log("picked prev")
         goPrev()
     })
 })
