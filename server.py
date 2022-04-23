@@ -258,6 +258,10 @@ def display_results():
     global quiz
     return render_template('results.html', info=quiz[len(quiz)-1])
 
+@app.route('/quiz')
+def display_quizhome():
+    return render_template('quizhome.html')
+
 if __name__ == '__main__':
    app.run(debug = True)
 

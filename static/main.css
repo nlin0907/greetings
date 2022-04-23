@@ -8,10 +8,55 @@
     margin-left: 20px;
     margin-top: 20px;
     padding: 5px;
-    background-color: #1AA7EC;
-    color: #FFE800;
+    background-color: #F4E9CD;
+    color: #7DBEBB;
 }
 
+.bold{
+    font-weight:bold;
+}
+
+.header{
+    text-align:center;
+    margin-top: 20px;
+    color: #F4E9CD;
+    -webkit-text-stroke: 1px black;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.question{
+    margin-bottom: 10px;
+}
+.pad{
+    padding: 20px;
+}
+.accent{
+    background-color: #F4E9CD;
+}
+
+.main{
+    background-color: #7DBEBB
+}
+.center{
+    text-align:center;
+}
+
+.bkg{
+    background-color: #7DBEBB;
+    padding: 15px;
+}
+
+#begin{
+    margin-left: 90%;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #F4E9CD;
+    color: #7DBEBB;
+    font-size: 20px;
+    border-radius: 5px solid;
+}
 #next{
     margin-left: 20px;
     margin-top: 20px;
@@ -33,7 +78,4 @@
 #points_calculator{
     margin: 10px;
     font-size: 20px;
-}
-.middle{
-    text-align: center;
 }
