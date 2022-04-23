@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container bkg">
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="accent header col-md-6">Quiz</div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="center accent col-md-6">10 multiple choice questions </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="center accent col-md-6">with images and audio </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 pad">
+            <div id="explanation">For each question you will be awarded a number of points. <br>
+                You can answer the question as many times as it takes to get it correct!
+                The <span class="bold">NEXT</span> button will be disabled until you get it correct.
+                <ul>
+                    <br><span class="bold">100</span> for correct on the first try
+                    <br><span class="bold">50</span> for on the second try
+                    <br><span class="bold">10</span> for on the third try
+                    <br><span class="bold">0</span> otherwise (but you will be able to advance)
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 pad">
+            
+                At the end you will be presented with a score out of 1000!
+                <ul>
+                    <br>750+ = <span class="bold">HIGH PASS</span>
+                    <br>500-750 = <span class="bold">PASS</span>
+                    <br>0-500 = <span class="bold">FAIL</span>
+                </ul>
+                You will then have the option to review material you have missed!
+        </div>
+    </div>
+
+
+<a href="/quiz/1"><button id="begin" type="button">Begin</button></a>
+
+</div>
+
+{% endblock %}
