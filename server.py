@@ -144,7 +144,7 @@ learn = [
     "id": "1",
     "country": "Spain",
     "hello_description": ["Touch your right cheeks together and make a kissing sound, then repeat the process on the left side."],
-    "hello": ["“Hola” (O-la, Hello)", "“Ey” (Ey, hello) "],
+    "hello": ["“Hola” (O-la, Hello)"],
     "hello_media": ["media/pronunciation_es_hola.mp3"],
     "goodbye_description": ["<b>If female:</b> Use the touching cheeks gesture.","<b>If male: </b> typical to shake hands."],
     "goodbye": ["“Adios” (Ah-dee-os, goodbye)", "“Hasta luego” (Hasta lu-ego, see you tomorrow)  "],
