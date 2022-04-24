@@ -19,7 +19,7 @@ function hello() {
         console.log(learn["hello_media"][i])
         let new_topic = ""
         if (learn["hello_media"][i] != null) {
-            new_topic= $("<div>" + item + '<br><audio controls> <source src="/static/'+learn["hello_media"][i]+ '"></audio>' + "</div><br/>")
+            new_topic= $("<div>" + item + '<br><audio controls> <source src="/static/'+learn["hello_media"][i]+ '"></audio>' + "</div><br>")
             console.log("this is the div audio "+JSON.stringify(new_topic))
         }
         else {
