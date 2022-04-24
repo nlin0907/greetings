@@ -11,20 +11,14 @@
     background-color: #1AA7EC;
     color: #FFE800;
 }
-
 #next{
-    margin-left: 20px;
-    margin-top: 20px;
-    padding: 5px;
     background-color: #4FC978;
-    color: #FFE800;
+    border-color: #4FC978
 }
-
 #feedback{
     margin: 10px;
     font-size: 20px;
 }
-
 #additions{
     margin: 20px;
     font-size: 15px;

@@ -143,42 +143,42 @@ learn = [
 {
     "id": "1",
     "country": "Spain",
-    "hello_description": ["Touch your right cheeks together and make a kissing sound, then repeat the process on the left side"],
+    "hello_description": ["Touch your right cheeks together and make a kissing sound, then repeat the process on the left side."],
     "hello": ["“Hola” (O-la, Hello)", "“Ey” (Ey, hello) "],
     "hello_media": ["media/pronunciation_es_hola.mp3"],
-    "goodbye_description": ["If female: Use the touching cheeks gesture.","If male: typical to shake hands."],
+    "goodbye_description": ["<b>If female:</b> Use the touching cheeks gesture.","<b>If male: </b> typical to shake hands."],
     "goodbye": ["“Adios” (Ah-dee-os, goodbye)", "“Hasta luego” (Hasta lu-ego, see you tomorrow)  "],
     "goodbye_media": ["media/pronunciation_es_adiós.mp3", "media/pronunciation_es_hasta_luego.mp3"],
     "next_question": "2",
     "prev_question": "-1",
-    "video": "https://www.youtube.com/watch?v=cpvQzjJ5Zw4"
+    "media": "https://thumbs.gfycat.com/PresentNextBluegill-max-1mb.gif"
 }, {
     "id": "2",
     "country": "Yemen",
-    "hello_description": [" If male: Shake hands with male Muslims. Some may not shake hands with non-Muslims. If female: Avoid shaking hands due to religious restrictions for them. "],
-    "hello": [" “marhaba” (Hello) ", "“As-Salam-u-Alaikum” (Peace by unto you) "],
+    "hello_description": ["<b>If male:</b> Shake hands with male Muslims. Some may not shake hands with non-Muslims.", "<b>If female:</b> Avoid shaking hands due to religious restrictions for them.", "Use your <b>right hand</b> when shaking hands."],
+    "hello": [" “marhaba” (Hello) ", "“As-Salam-u-Alaikum” (Peace by unto you)"],
     "hello_media": ["media/arabicwelcome.mp3", "media/Ar-السلام_عليكم.oga"],
     "goodbye_description": ["You can say the Salam greeting when arriving and leaving a gathering."],
     "goodbye": [" “ma'a as-salaama” (goodbye)"],
     "goodbye_media": ["media/pronunciation_es_adiós.mp3"],
     "next_question": "3",
     "prev_question": "1",
-    "video": ""
+    "media": "https://scoopempire.com/wp-content/uploads/2018/10/shake_1-1.jpg"
 }, {
     "id": "3",
     "country": "Japan",
-    "hello_description": [" Bow from the waist with 45-degrees, with deeper bows to be more formal/respectful. Address everybody in the group, not one single greeting."],
-    "hello": [" “こんにちは” (Kon'nichiwa, good afternoon, for semi-formal settings) ", " “やあ”(Ya, hey, exclamation/informal settings) "],
+    "hello_description": [" Bow from the waist with 45-degrees, with deeper bows to be more formal/respectful.", "Address everybody in the group, not one single greeting."],
+    "hello": [" “こんにちは” (Kon'nichiwa, good afternoon, semi-formal settings) ", " “やあ”(Ya, hey, exclamation/informal settings) "],
     "hello_media": ["media/pronunciation_ja_こんにちは.mp3", "media/pronunciation_ja_じゃあね.mp3"],
     "goodbye_description": [],
     "goodbye": [" “さようなら” (Saiyonnara, goodbye)", "“じゃあね” (Ja ne, see you)"],
     "goodbye_media": ["media/pronunciation_ja_さようなら.mp3"],
     "next_question": "4",
     "prev_question": "2",
-    "video": "https://www.youtube.com/watch?v=96q643XmB60"
+    "media": "https://c.tenor.com/GBGNBFPsDV4AAAAC/bow-japanese.gif"
 },{
     "id": "4",
-    "country": "New Zealand",
+    "country": "Tibet",
     "hello_description": ["Monks stick out their tongues as a sign of respect or agreement.", "Many press the hands together and place them in front of their chest to show that they “come in peace”."],
     "hello": ["“Tashi delek” (Good fortune, hello)"],
     "hello_media": ["media/pronunciation_bo_བཀྲ་ཤིས་བདེ་ལེགས།.mp3"],
@@ -187,11 +187,11 @@ learn = [
     "goodbye_media": ["media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3"],
     "next_question": "5",
     "prev_question": "3",
-    "video": ""
+    "media": "https://www.travelordietrying.com/wp-content/uploads/2017/03/11747360-greetingspreview2-1487274955-650-b0a16e3e93-1487335826.jpg"
 },{
     "id": "5",
-    "country": "Tibet",
-    "hello_description": ["Hugs and shake hands with eye contact.", "Do not call someone over by yelling “Oi”.", "Maōri greet by pressing noses together."],
+    "country": "New Zealand",
+    "hello_description": ["Hugs and shake hands with eye contact.", "<b>Do not</b> call someone over by yelling “Oi”.", "Maōri greet by pressing noses together."],
     "hello": ["“Kia ora!” (Hi)", "“Teh-nah kweh” (formal, hello)", "“Kia ora, bro!” (Hi, mate)", "“gidday!”"],
     "hello_media": ["media/pronunciation_mi_kia_ora.mp3", "media/pronunciation_mi_tēnā_koe.mp3"],
     "goodbye_description": [],
@@ -199,7 +199,7 @@ learn = [
     "goodbye_media": ["media/pronunciation_mi_kia_ora.mp3"],
     "next_question": "-1",
     "prev_question": "4",
-    "video": "https://www.youtube.com/watch?v=Iajm9s1h-Ak"
+    "media": "https://www.travelordietrying.com/wp-content/uploads/2017/03/pablo-10-3.png"
 }] 
 
 
