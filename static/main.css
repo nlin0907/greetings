@@ -44,7 +44,6 @@
     background-color: #E3F2FD;
     color: black;
 }
-
 .main{
     background-color: #7DBEBB;
     color: white;
@@ -70,18 +69,13 @@
     border-radius: 5px solid white;
 }
 #next{
-    margin-left: 20px;
-    margin-top: 20px;
-    padding: 5px;
     background-color: #4FC978;
-    color: #FFE800;
+    border-color: #4FC978
 }
-
 #feedback{
     margin: 10px;
     font-size: 20px;
 }
-
 #additions{
     margin: 20px;
     font-size: 15px;
