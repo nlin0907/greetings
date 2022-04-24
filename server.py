@@ -107,7 +107,7 @@ quiz = [
         "correct_answer": "Audio 1",
         "media": "",
         "media_type": "audio array",
-        "additions": ["The following are Tibetian greetings. Which one corresponds to “Tashi delek”--hello?", "1", "/media/hello", "2", "/media/other"],
+        "additions": ["The following are Tibetian greetings. Which one corresponds to “Tashi delek”--hello?", "1", "media/pronunciation_bo_བཀྲ་ཤིས་བདེ་ལེགས།.mp3", "2", "media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3"],
         "points": "0",
         "tries": "0",
         "next_question": "10"
