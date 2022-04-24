@@ -69,7 +69,7 @@ quiz = [
         "question": "Consider the following scenario",
         "answers":  ["Shake her hand", "Bow", "Say As-Salam-u-Alaikum", "Rub your nose against hers"],
         "correct_answer": "Say As-Salam-u-Alaikum",
-        "media": "https://media.gettyimages.com/photos/happy-arabic-girl-picture-id154917566?s=612x612",
+        "media": "/static/media/yemen_question.jpg",
         "media_type": "image",
         "additions": ["You’re in Yemen, and are introduced to your friend Abbud’s wife. How do you greet her?"],
         "points": "0",
