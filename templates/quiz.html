@@ -16,9 +16,9 @@
         <div class="col-md-6">
             <div id="additional"></div>
             {% if info["media_type"]=="image" %}
-                <img class="media_source" src={{info["media"]}} alt="Image of greeting" width="500" height="400"></img>  
+                <img class="media_source quiz_media" src={{info["media"]}} alt="Image of greeting" width="500" height="400"></img>  
             {% elif info["media_type"]=="text" %}
-                <div class="media_source text-media">{{info["media"]}}</div>
+                <div class="media_source quiz_media text-media">{{info["media"]}}</div>
             {% elif info["media_type"]=="audio" %}
                 
                 <audio controls>

@@ -20,9 +20,12 @@ body{
 
 
 .media_source{
-    margin-left: 15%;
     width: 70%;
     height: auto;
+}
+
+.quiz_media{
+    margin-left: 15%;
 }
 
 .text-media{
