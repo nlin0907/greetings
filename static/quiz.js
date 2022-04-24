@@ -69,15 +69,17 @@ $(document).ready(function(){
                 if(i==0){
                     let new_topic= $("<div>"+item+"</div>")
                     $("#additional").append(new_topic)
+                    console.log("GOODBYEEEE")
                 }
                 else if(i%2!=0){
                     let new_topic= $("<div>"+item+"</div>")
                     $("#additional").append(new_topic)
+                    console.log("OKKKKKK")
                 }
                 else{
                     //let new_topic=$("<button type='button' value='" + item +"' class='play_audio'>"+"<img src='https://cdn1.iconfinder.com/data/icons/playback-controls/24/172-512.png'>"+"</button>")
                     let new_topic= $("<audio controls><source src='http://localhost:5000/'"+item+"type='audio/mp3'></audio>")
-                    
+                    console.log("HEREEEE")
                     $("#additional").append(new_topic)
                 }
             })
@@ -98,14 +100,14 @@ $(document).ready(function(){
     }
 
     $.each(info["answers"], function(i, ans){
-        let new_answer= $("<button type='button' value='" + ans +"' class='ans_option'>"+ans+"</button>")
+        let new_answer= $("<button type='button' class='btn-lg ans_option' value='" + ans +"' class='ans_option'>"+ans+"</button>")
         $("#answer_choices").append(new_answer)
-        $("#answer_choices").append($('</br>'))
 
-        $("#correct_mark").append()
+        // $("#correct_mark").append()
     })
 
     $("#points_calculator").text("Points: "+info["points"]+"/1000")
+    $("#question_number").text("Question: "+info["id"]+"/10")
 
     $(".ans_option").click(function(){     
         current_choice = $(this).attr("value")
@@ -113,7 +115,6 @@ $(document).ready(function(){
         tries += 1
         console.log(tries)
         if(current_choice == info["correct_answer"]){
-            
             $(this).css('background-color','#4FC978')
             console.log("TRIES!" + tries)
             if(tries==1){
@@ -144,7 +145,7 @@ $(document).ready(function(){
             console.log(points)
             
         }else{
-            $(this).css('background-color','#D21404')
+            $(this).css('background-color','#D21404 !important')
             $("#feedback").text("Try again")
             $("#feedback").css('color','#D21404')
             $('#next').prop('disabled', true)
