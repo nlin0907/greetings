@@ -75,9 +75,9 @@ $(document).ready(function(){
                     $("#additional").append(new_topic)
                 }
                 else{
+    
                     //let new_topic=$("<button type='button' value='" + item +"' class='play_audio'>"+"<img src='https://cdn1.iconfinder.com/data/icons/playback-controls/24/172-512.png'>"+"</button>")
-                    let new_topic= $("<audio controls><source src='http://localhost:5000/'"+item+"type='audio/mp3'></audio>")
-                    
+                    let new_topic= $('<audio controls> <source src="/static/'+item+ '"></audio>')                     
                     $("#additional").append(new_topic)
                 }
             })

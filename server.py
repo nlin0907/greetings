@@ -57,8 +57,8 @@ quiz = [
         "question": "Select the area where you would hear the following words:",
         "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
         "correct_answer": "Yemen",
-        "media": "/media/arabicwelcome.mp3",
         "media_type": "audio",
+        "media": "/static/media/arabicwelcome.mp3",
         "additions": ["ٱلسَّلَامُ عَلَيْكُمْ as-salāmu ʿalaykum"],
         "points": "0",
         "tries": "0",
@@ -94,7 +94,7 @@ quiz = [
         "correct_answer": "Audio 1",
         "media": "",
         "media_type": "audio array",
-        "additions": ["Which of these two Japanese “goodbyes” is most formal?", "1", "media/formal", "2", "media/informal"],
+        "additions": ["Which of these two Japanese “goodbyes” is most formal?", "1", "media/pronunciation_ja_さようなら.mp3", "2", "media/pronunciation_ja_やあ.mp3"],
         "points": "0",
         "tries": "0",
         "next_question": "8"
@@ -130,7 +130,7 @@ quiz = [
         "correct_answer": "New Zealand",
         "media": "",
         "media_type": "audio array",
-        "additions": ["Click on the incorrect pairing of greetings", "Spain", "/media/spain", "Yemen", "/media/yemen", "Japan", "/media/japan", "Tibet", "/media/tibet", "New Zealand", "/media/notnz"],
+        "additions": ["Click on the incorrect pairing of greetings", "Spain", "media/pronunciation_es_hola.mp3", "Yemen", "media/Ar-السلام_عليكم.oga", "Japan", "media/pronunciation_ja_こんにちは.mp3", "Tibet", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3", "New Zealand", "media/pronunciation_mi_kia_ora.mp3"],
         "points": "0",
         "tries": "0",
         "next_question": "-1"
