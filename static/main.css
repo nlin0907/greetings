@@ -53,6 +53,10 @@ body{
     text-align: center;
 }
 
+.smallpad{
+    padding: 5px;
+}
+
 .question{
     margin-bottom: 15px;
     text-align:center;
