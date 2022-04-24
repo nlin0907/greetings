@@ -18,7 +18,7 @@
 		padding: 10px;
     }
 	.media_source {
-		width: 90%;
+		width: 95%;
 	}
 	.jumbopad {
 		padding-bottom: 10px;
@@ -34,21 +34,13 @@
     		<div class="col">
     			<div class="jumbotron">
 	    			<h3 class="jumbopad">Hello</h3>
-	    			<div class="row" id="hello_content">
-					</div>
+	    			<div class="row" id="hello_content"></div>
                     <br>
 	    			<div class="row" id="hello_description"></div>
 					<br>
 					<img class="media_source" src={{learn["media"]}} alt="greeting img" ></img> 
-    			</div>
-    		<div class="row">
-			<div class="col-md-6">
-				<button id="prev" class="btn btn-primary btn-lg" type="button">Previous</button>
+    			</div>	
 			</div>
-
-    	</div>
-    			
-		</div>
     		<div class="col">
 				<div class="jumbotron">
 	    			<h3 class="jumbopad">Goodbye</h3>
@@ -56,15 +48,19 @@
                     <br>
 	    			<div class="row" id="goodbye_description"></div>
 	    		</div>
+				<br>
+    		</div>
+		</div>
 		<div class="row">
-			<div class="col-md-6">
-                <button id="next" class="btn btn-primary btn-lg" type="button">Next</button>
+			<div class="col-md-11">
+				<button id="prev" class="btn btn-primary btn-lg" type="button">Previous</button>
+			</div>
+			<div class="col-md-1">
+				<button id="next" class="btn btn-primary btn-lg" type="button">Next</button>
 			</div>
 		</div>
 		<br>
-    	</div>
 	</div>
-   
 </body>
 
 

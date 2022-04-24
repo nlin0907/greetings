@@ -192,7 +192,7 @@ learn = [
     "id": "5",
     "country": "New Zealand",
     "hello_description": ["Hugs and shake hands with eye contact.", "<b>Do not</b> call someone over by yelling “Oi”.", "Maōri greet by pressing noses together."],
-    "hello": ["“Kia ora!” (Hi)", "“Teh-nah kweh” (formal, hello)", "“Kia ora, bro!” (Hi, mate)", "“gidday!”"],
+    "hello": ["“Kia ora!” (Hi)", "“Teh-nah kweh” (formal, hello)"],
     "hello_media": ["media/pronunciation_mi_kia_ora.mp3", "media/pronunciation_mi_tēnā_koe.mp3"],
     "goodbye_description": [],
     "goodbye": ["“Haere rā ” (formal, goodbye)", "“Kia ora” (informal)"],
