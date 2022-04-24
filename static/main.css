@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #2196F3;
+    background-color: #64B5F6;
 }
 
 .ans_option{
@@ -17,7 +17,6 @@ body{
     border-color: #E3F2FD;
     color: black;
 }
-
 
 .media_source{
     width: 70%;
@@ -71,7 +70,7 @@ body{
     color: black;
 }
 .main{
-    background-color: #2196F3;
+    background-color: #64B5F6;
     color: white;
 
 }
@@ -80,7 +79,7 @@ body{
 }
 
 .bkg{
-    background-color: #2196F3;
+    background-color: #64B5F6;
     padding: 15px;
     color: white;
 }
@@ -103,7 +102,8 @@ body{
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 30px;
-    -webkit-text-stroke: 0.5px white;
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px black;
 }
 #additions{
     margin: 20px;

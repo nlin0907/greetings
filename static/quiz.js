@@ -115,23 +115,24 @@ $(document).ready(function(){
         tries += 1
         console.log(tries)
         if(current_choice == info["correct_answer"]){
-            $(this).css('background-color','#4FC978')
+            $(this).css('background-color','#40916c')
+            $(this).css('border-color','#40916c')
             console.log("TRIES!" + tries)
             if(tries==1){
                 points = 100
                 $("#feedback").text("+"+points+"!")
-                $("#feedback").css('color','#4FC978')
+                $("#feedback").css('color','#40916c')
             }
             else if(tries==2){
                 points = 50
                 console.log("HELLO")
                 console.log(points + "points")
                 $("#feedback").text("+"+points+"!")
-                $("#feedback").css('color','#4FC978')
+                $("#feedback").css('color','#40916c')
             }else if(tries==3){
                 points = 10
                 $("#feedback").text("+"+points+"!")
-                $("#feedback").css('color','#4FC978')
+                $("#feedback").css('color','#40916c')
             }
             else{
                 points = 0
@@ -146,6 +147,8 @@ $(document).ready(function(){
             
         }else{
             $(this).css('background-color','#D21404 !important')
+            $(this).css('border-color','#D21404 !important')
+            $(this).css('border','None')
             $("#feedback").text("Try again")
             $("#feedback").css('color','#D21404')
             $('#next').prop('disabled', true)

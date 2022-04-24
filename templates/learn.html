@@ -10,12 +10,11 @@
 </script>
     
 <style>
-    .container{
-        background-color: lightgrey;
-    }
+
     #country_name{
-        text-align: center;
+        text-align: center !important;
 		padding: 10px;
+		display:inline;
     }
 	.media_source {
 		width: 95%;
@@ -23,12 +22,20 @@
 	.jumbopad {
 		padding-bottom: 10px;
 	}
+	.jumbotron{
+		background-color:#E3F2FD;
+	}
+	.centerme{
+		text-align:center;
+		margin: 0 auto;
+
+	}
 </style>
 
 <body>
 	<div class="container">
 		<div class="row">
-			<h1 id="country_name">{{learn["country"]}}</h1>
+			<h1 id="country_name" class="header centerme" >{{learn["country"]}}</h1>
 		</div>
     	<div class="row">
     		<div class="col">

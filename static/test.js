@@ -1,6 +1,6 @@
 function goToNext(){
     if(parseInt(learn['next_question'])==-1){
-        window.location.href="/quiz/1"
+        window.location.href="/quiz"
     }else{
         window.location.href="/learn/"+learn['next_question']
     }
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
     $("#next").click(function(){     
         if(parseInt(learn['next_question'])==-1){
-            window.location.href="/quiz/1"
+            window.location.href="/quiz"
         }else{
             window.location.href="/learn/"+learn['next_question']
         }
