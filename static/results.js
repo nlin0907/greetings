@@ -1,11 +1,14 @@
+var onpage = []
 $(document).ready(function(){
     $("#result_list").empty()
     $.each(result, function(i, item){
         var current_id;
         console.log(item["correct_answer"])
         $.each(learn, function(i, item_learn){
-            if (item_learn["country"] == item["correct_answer"]){
+            if ((item_learn["country"] == item["correct_answer"]) && (jQuery.inArray(item_learn["id"], onpage) !== -1)){
                 current_id=item_learn["id"]
+                onpage.append(item_learn["id"])
+                console.log("on pg", onpage)
                 console.log('/learn/'+current_id)
             }
         })

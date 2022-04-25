@@ -10,18 +10,80 @@
     console.log(info)
 </script>
 
-<div>Your score is: {{info["points"]}} / 1000</div>
-{% if info["points"]|int > 750 %}
-    <div>You have HIGH PASSED!</div>
-{% elif info["points"]|int > 500 %}
-    <div>You have passed!</div>
-{% else %}
-    <div>You have failed!</div>
-{% endif %}
-<div>
-    Please review the following countries:
+<div class="container">
+    <div class="row">
+        <div class="miniheader">Your score is:</div>
+    </div>
+    <div class="accent rounded">
+    {% if info["points"]|int > 750 %}
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 header2 text-primary">HIGH PASS: {{info["points"]}} / 1000</div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/1PMVNNKVIL8Ig" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            </div>
+            <div class="col-md-6 pad">
+                Please review the following countries:
+                <div id="result_list"></div>
+            </div>
+        </div>
+    {% elif info["points"]|int > 500 %}
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 header2 text-primary">PASS: {{info["points"]}} / 1000</div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/y8OIynHJhJ5Ys" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            </div>
+            <div class="col-md-6 pad">
+                Please review the following countries:
+                <div id="result_list"></div>
+            </div>
+        </div>
+    {% elif info["points"]|int > 100 %}
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 header2 text-primary">FAIL: {{info["points"]}} / 1000</div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/AYKv7lXcZSJig" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            </div>
+            <div class="col-md-6 pad">
+                Please review the following countries:
+                <div id="result_list"></div>
+            </div>
+        </div>
+    {% else %}
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 header2 text-primary">LOW FAIL: {{info["points"]}} / 1000</div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/ChX3hzy5CkXsI" width="480" height="245" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            </div>
+            <div class="col-md-6 pad">
+                Please review the following countries:
+                <div id="result_list"></div>
+            </div>
+        </div>
+    {% endif %}
+    </div>
+    <!-- <div class="row">
+        Please review the following countries:
+    </div>
+    <div class="row">
+        <div id="result_list"></div>
+    </div> -->
 </div>
-<div id="result_list">
 
 </div>
 
