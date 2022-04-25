@@ -58,10 +58,33 @@ function submit_question(info){
     });
 }
 
+function saveResult(info){
+    current_id = info["id"]
+    $.ajax({
+        type: "POST",
+        url: "/add_result",              
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(current_id),
+        success: function(result){
+            let all_data = result["result"]
+            console.log("all data", all_data)
+
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
+
 
 $(document).ready(function(){
 
     console.log(info["correct_answer"])
+    console.log("result", result)
 
     if(info["additions"].length!=0){
         if(info["media_type"]=="audio array"){
@@ -131,11 +154,13 @@ $(document).ready(function(){
                 $("#feedback").css('color','#40916c')
             }else if(tries==3){
                 points = 10
+                saveResult(info)
                 $("#feedback").text("+"+points+"!")
                 $("#feedback").css('color','#40916c')
             }
             else{
                 points = 0
+                saveResult(info)
                 $("#feedback").text("+0!")
                 $("#feedback").css('color','#4FC978')
             }
