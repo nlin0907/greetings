@@ -5,6 +5,8 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'results.js') }}"></script>
 <script>
     let info = {{info|tojson}} 
+    let result = {{result|tojson}} 
+    let learn={{learn|tojson}}
     console.log(info)
 </script>
 
@@ -16,5 +18,11 @@
 {% else %}
     <div>You have failed!</div>
 {% endif %}
+<div>
+    Please review the following countries:
+</div>
+<div id="result_list">
+
+</div>
 
 {% endblock %}

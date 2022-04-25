@@ -192,6 +192,7 @@ learn = [
     "media": "https://www.travelordietrying.com/wp-content/uploads/2017/03/pablo-10-3.png"
 }] 
 
+result=[]
 
 # ROUTES
 
@@ -220,6 +221,7 @@ def learn_country(id=None, learn=learn):
 @app.route('/quiz/<id_num>', methods=['GET', 'POST'])
 def answer_quiz(id_num=None):
     global quiz
+    global result
     if request.method=="POST":
         json_data = request.get_json()
         if json_data is not None:
@@ -232,7 +234,7 @@ def answer_quiz(id_num=None):
     else:
         idx = int(id_num)
         new_idx = int(id_num) - 1
-        return render_template('quiz.html', info=quiz[new_idx])
+        return render_template('quiz.html', info=quiz[new_idx],result=result)
 
     print("points", quiz[idx]["points"])
     if new_idx == 0:
@@ -246,11 +248,25 @@ def answer_quiz(id_num=None):
 def display_results():
     print("here")
     global quiz
-    return render_template('results.html', info=quiz[len(quiz)-1])
+    global result
+    global learn
+    return render_template('results.html', info=quiz[len(quiz)-1],result=result,learn=learn)
 
 @app.route('/quiz')
 def display_quizhome():
+    global result
+    result=[]
     return render_template('quizhome.html')
+
+@app.route('/add_result',methods=['GET','POST'])
+def add_result():
+    global result
+    global quiz
+    json_data = request.get_json()
+    current=quiz[int(json_data)-1]
+    result.append(current)
+
+    return jsonify(result=result)
 
 if __name__ == '__main__':
    app.run(debug = True)
