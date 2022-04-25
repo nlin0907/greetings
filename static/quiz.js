@@ -100,7 +100,7 @@ $(document).ready(function(){
     }
 
     $.each(info["answers"], function(i, ans){
-        let new_answer= $("<button type='button' class='btn-lg ans_option' value='" + ans +"' class='ans_option'>"+ans+"</button>")
+        let new_answer= $("<button type='button' class='btn-lg btn-primary btn ans_option' value='" + ans +"' class='ans_option'>"+ans+"</button>")
         $("#answer_choices").append(new_answer)
 
         // $("#correct_mark").append()
