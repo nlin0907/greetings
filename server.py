@@ -249,7 +249,8 @@ def display_results():
     print("here")
     global quiz
     global result
-    return render_template('results.html', info=quiz[len(quiz)-1],result=result)
+    global learn
+    return render_template('results.html', info=quiz[len(quiz)-1],result=result,learn=learn)
 
 @app.route('/quiz')
 def display_quizhome():

@@ -1,8 +1,23 @@
 $(document).ready(function(){
+    $("#result_list").empty()
     $.each(result, function(i, item){
-        $("#result_list").empty()
-        console.log(item["media"])
-
+        var current_id;
+        console.log(item["correct_answer"])
+        $.each(learn, function(i, item_learn){
+            if (item_learn["country"] == item["correct_answer"]){
+                current_id=item_learn["id"]
+                console.log('/learn/'+current_id)
+            }
+        })
+        let current_link='/learn/'+current_id
+        let review_link= $("<a href="+current_link+">"+item["correct_answer"]+"</a>")
+        
+        $("#result_list").append(review_link)
+        $("#result_list").append($("<br>"))
+    
+            // $("#correct_mark").append()
+        })
+/*
         if (item["media_type"]=="image"){
             let img_tem=$("<img class='media_source quiz_media' src=" + item["media"] + "alt='Image of greeting' width='500' height='400'></img>")
             $("#result_list").append(img_tem)
@@ -14,9 +29,9 @@ $(document).ready(function(){
             $("#result_list").append(audio_tem)
         }
            
-          
+     */     
     
 
         
-    })
+    
 })
