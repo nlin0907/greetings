@@ -85,12 +85,12 @@ quiz = [
     {
         "id": "7",
         "question": "Listen to the audios and respond to the question below",
-        "answers":  ["Audio 1", "Audio 2"],
+        "answers":  ["Audio 1", "Audio 2", "Audio 3", "Audio 4", "Audio 5"],
         "correct_answer": "Audio 1",
         "relevant_country": "Japan",
         "media": "",
         "media_type": "audio array",
-        "additions": ["Which of these two Japanese “goodbyes” is most formal?", "1", "media/pronunciation_ja_さようなら.mp3", "2", "media/pronunciation_ja_やあ.mp3"],
+        "additions": ["Which of these audios is the formal Japanese “goodbye”?", "1", "media/pronunciation_ja_さようなら.mp3", "2", "media/pronunciation_ja_やあ.mp3", "3", "media/arabicwelcome.mp3", "4", "media/pronunciation_es_hola.mp3", "5", "media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3"],
         "points": "0",
         "tries": "0",
         "next_question": "8"
@@ -111,12 +111,12 @@ quiz = [
     {
         "id": "9",
         "question": "Listen to the audios and respond to the question below:",
-        "answers":  ["Audio 1", "Audio 2"],
-        "correct_answer": "Audio 1",
+        "answers":  ["Audio 1", "Audio 2", "Audio 3", "Audio 4", "Audio 5"],
+        "correct_answer": "Audio 4",
         "relevant_country": "Tibet",
         "media": "",
         "media_type": "audio array",
-        "additions": ["The following are Tibetian greetings. Which one corresponds to “Tashi delek”--hello?", "1", "media/pronunciation_bo_བཀྲ་ཤིས་བདེ་ལེགས།.mp3", "2", "media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3"],
+        "additions": ["The following are Tibetian greetings. Which one corresponds to hello?", "1", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3", "2", "media/pronunciation_bo_ག་ལེར་ཕེབས་།.mp3", "3", "media/Ar-السلام_عليكم.oga", "4", "media/pronunciation_bo_བཀྲ་ཤིས་བདེ་ལེགས།.mp3", "5", "media/pronunciation_mi_tēnā_koe.mp3"],
         "points": "0",
         "tries": "0",
         "next_question": "10"
