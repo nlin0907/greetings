@@ -23,6 +23,22 @@ body{
     font-size: 14px;
 }
 
+.failcolor{
+    color: #D21404;
+}
+
+.midcolor{
+    color: #FFDA00;
+}
+
+.passcolor{
+    color: #40916c;
+}
+
+.btn:hover {
+    background-color: #0d6efd !important;
+}
+
 .media_source{
     width: 70%;
     height: auto;
@@ -98,8 +114,12 @@ body{
     padding: 20px;
 }
 .accent{
-    background-color: white;
+    background-color: white !important;
     color: black;
+}
+.lightgray {
+    background-color: #E5E4E2;
+    color: gray;
 }
 .main{
     background-color: #64B5F6;

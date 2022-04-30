@@ -266,6 +266,8 @@ def display_results():
 def display_quizhome():
     global result
     result=[]
+    for item in quiz:
+        item["points"] = "0"
     return render_template('quizhome.html')
 
 @app.route('/add_result',methods=['GET','POST'])
