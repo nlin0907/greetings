@@ -35,6 +35,10 @@ body{
     color: #40916c;
 }
 
+.btn:hover {
+    background-color: #0d6efd !important;
+}
+
 .media_source{
     width: 70%;
     height: auto;
