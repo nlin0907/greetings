@@ -110,8 +110,12 @@ body{
     padding: 20px;
 }
 .accent{
-    background-color: white;
+    background-color: white !important;
     color: black;
+}
+.lightgray {
+    background-color: #E5E4E2;
+    color: gray;
 }
 .main{
     background-color: #64B5F6;
