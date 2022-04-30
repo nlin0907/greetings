@@ -2,14 +2,6 @@
 
 {% block content %}
 
-<style>
-    
-    #answer_choices{
-        padding-left: 0px;
-    }
-
-</style>
-
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <script>
     let info = {{info|tojson}} 

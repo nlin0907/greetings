@@ -3,37 +3,11 @@
 {% block content %}
 
 <script type="text/javascript"></script>
-    <style>
-    	.col-md-4{
-    		background-color: pink;
-    	}
-    	.btn-primary{
-    		width: 100%; 
-    		border:none; 
-    		display:inline-block; 
-    		color:black;
-    	}
-    	#options{
-    		padding-bottom: 100px;
-    	}
 
-    	img{
-			position: relative;
-  			top: 50%;
-  			transform: translateY(-50%);
-			width: 100%;
-  			height: auto;
-    	}
-		body{
-			background-image: url("/static/media/world_map.JPG")
-		}
-    </style>
-
-
-<body>
+<body class = "imagebody">
 	<div class="container main rounded">
     	<div class="row">
-    		<div class="col-6"><img src="/static/media/world_map.JPG"></div>
+    		<div class="col-6"><img class = "homeimg" src="/static/media/world_map.JPG"></div>
  
 			<div class="col-md-6 justify-content-center">
 					<br>
@@ -45,7 +19,7 @@
 					<br>
 					<br>
 					<div class="col-md-6">
-						<a class="btn btn-primary btn-lg accent" href="/learn/1">Click here to begin!</a>
+						<a class="btn btn-primary1 btn-lg accent" href="/learn/1">Click here to begin!</a>
 					</div>
 					<br>
 					<br>

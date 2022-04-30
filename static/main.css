@@ -10,10 +10,12 @@ body{
 
 #answer_choices{
     display: inline;
+    padding-left: 0px;
 }
 
 .ans_option{
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 50px;
     padding-top: 5px;
     /* border-radius: 5px solid white; */
@@ -141,11 +143,6 @@ body{
     margin-top: 20px;
 }
 
-/* #next{
-    background-color: white;
-    border-color: white;
-    color: black;
-} */
 #feedback{
     margin-top: 20px;
     margin-bottom: 10px;
@@ -164,4 +161,46 @@ body{
 }
 #text_link{
     padding: 10px;
+}
+
+.imagebody{
+    background-image: url("/static/media/world_map.JPG")
+}
+
+.homeimg{
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    width: 100%;
+      height: auto;
+}
+
+.btn-primary1{
+    width: 100%; 
+    border:none; 
+    display:inline-block; 
+    color:black;
+}
+
+#country_name{
+    text-align: center !important;
+    padding: 10px;
+    display:inline;
+}
+
+.media_source1 {
+    width: 95%;
+}
+
+.jumbopad {
+    padding-bottom: 10px;
+}
+.jumbotron{
+    background-color:#E3F2FD;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.centerme {
+    text-align:center;
+    margin: 0 auto;
 }
