@@ -2,6 +2,15 @@
 
 {% block content %}
 
+<style>
+    
+    #answer_choices{
+
+        padding-left: 0px;
+    }
+
+</style>
+
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <script>
     let info = {{info|tojson}} 
@@ -15,21 +24,21 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <div id="additional"></div>
+            <div id="additional" style="text-align: center;"></div>
             {% if info["media_type"]=="image" %}
                 <img class="media_source quiz_media" src={{info['media']}} alt="Image of greeting" width="500" height="400"></img>  
             {% elif info["media_type"]=="text" %}
                 <div class="media_source quiz_media text-media">{{info["media"]}}</div>
             {% elif info["media_type"]=="audio" %}
                 
-                <audio controls>
+                <audio controls style="margin: 0 auto; display: block;">
                 <source src={{info["media"]}} type="audio/mp3">
                 </audio>
             {% endif %}
         </div>
             <div class="col-md-3"></div>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
             <div id="answer_choices"></div>
     </div>
     <div class="row">
