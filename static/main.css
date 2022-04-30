@@ -23,6 +23,18 @@ body{
     font-size: 14px;
 }
 
+.failcolor{
+    color: #D21404;
+}
+
+.midcolor{
+    color: #FFDA00;
+}
+
+.passcolor{
+    color: #40916c;
+}
+
 .media_source{
     width: 70%;
     height: auto;
