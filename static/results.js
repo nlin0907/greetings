@@ -13,13 +13,11 @@ $(document).ready(function(){
         })
         let current_link='/learn/'+current_id
         let review_link= $("<a href="+current_link+">"+item["relevant_country"]+"</a>")
-        onpage.push(item["relevant_country"])
-        console.log(onpage.indexOf(item["relevant_country"])
-        // if(onpage.indexOf(item["relevant_country"]) !== -1){
-        //     console.log("Ok");
-        // }
-        $("#result_list").append(review_link)
-        $("#result_list").append($("<br>"))
+        if(onpage.indexOf(item["relevant_country"]) == -1){
+            onpage.push(item["relevant_country"])
+            $("#result_list").append(review_link)
+            $("#result_list").append($("<br>"))
+        }
     
             // $("#correct_mark").append()
         })
