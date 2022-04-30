@@ -3,18 +3,21 @@ $(document).ready(function(){
     $("#result_list").empty()
     $.each(result, function(i, item){
         var current_id;
-        console.log(item["correct_answer"])
+        console.log(item["relevant_country"])
         $.each(learn, function(i, item_learn){
-            if ((item_learn["country"] == item["correct_answer"]) && (jQuery.inArray(item_learn["id"], onpage) !== -1)){
+            if ((item_learn["country"] == item["relevant_country"])){
                 current_id=item_learn["id"]
-                onpage.append(item_learn["id"])
                 console.log("on pg", onpage)
                 console.log('/learn/'+current_id)
             }
         })
         let current_link='/learn/'+current_id
-        let review_link= $("<a href="+current_link+">"+item["correct_answer"]+"</a>")
-        
+        let review_link= $("<a href="+current_link+">"+item["relevant_country"]+"</a>")
+        onpage.push(item["relevant_country"])
+        console.log(onpage.indexOf(item["relevant_country"])
+        // if(onpage.indexOf(item["relevant_country"]) !== -1){
+        //     console.log("Ok");
+        // }
         $("#result_list").append(review_link)
         $("#result_list").append($("<br>"))
     
