@@ -129,15 +129,12 @@ quiz = [
         "relevant_country": "New Zealand",
         "media": "",
         "media_type": "audio array",
-        "additions": ["Click on the incorrect pairing of greetings", "Spain", "media/pronunciation_es_hola.mp3", "Yemen", "media/Ar-السلام_عليكم.oga", "Japan", "media/pronunciation_ja_こんにちは.mp3", "Tibet", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3", "New Zealand", "media/pronunciation_mi_kia_ora.mp3"],
+        "additions": ["Click on the incorrect pairing of greetings", "Spain", "media/pronunciation_es_hola.mp3", "Yemen", "media/Ar-السلام_عليكم.oga", "Japan", "media/pronunciation_ja_こんにちは.mp3", "Tibet", "media/pronunciation_bo_རྗེས་མ་མཇལ་ཡོང་།.mp3", "New Zealand", "media/arabicwelcome.mp3"],
         "points": "0",
         "tries": "0",
         "next_question": "-1"
     }
     ]   
-
-
-
 
 learn = [
 {
@@ -169,10 +166,10 @@ learn = [
     "country": "Japan",
     "hello_description": [" Bow from the waist with 45-degrees, with deeper bows to be more formal/respectful.", "Address everybody in the group, not one single greeting."],
     "hello": [" “こんにちは” (Kon'nichiwa, good afternoon, semi-formal settings) ", " “やあ”(Ya, hey, exclamation/informal settings) "],
-    "hello_media": ["media/pronunciation_ja_こんにちは.mp3", "media/pronunciation_ja_じゃあね.mp3"],
+    "hello_media": ["media/pronunciation_ja_こんにちは.mp3", "media/pronunciation_ja_やあ.mp3"],
     "goodbye_description": [],
     "goodbye": [" “さようなら” (Saiyonnara, goodbye)", "“じゃあね” (Ja ne, see you)"],
-    "goodbye_media": ["media/pronunciation_ja_さようなら.mp3"],
+    "goodbye_media": ["media/pronunciation_ja_さようなら.mp3", "media/pronunciation_ja_じゃあね.mp3"],
     "next_question": "4",
     "prev_question": "2",
     "media": "https://c.tenor.com/GBGNBFPsDV4AAAAC/bow-japanese.gif"
@@ -195,8 +192,8 @@ learn = [
     "hello": ["“Kia ora!” (Hi)", "“Teh-nah kweh” (formal, hello)"],
     "hello_media": ["media/pronunciation_mi_kia_ora.mp3", "media/pronunciation_mi_tēnā_koe.mp3"],
     "goodbye_description": [],
-    "goodbye": ["“Haere rā ” (formal, goodbye)", "“Kia ora” (informal)"],
-    "goodbye_media": ["media/pronunciation_mi_kia_ora.mp3"],
+    "goodbye": ["“Haere rā ” (formal, goodbye)"],
+    "goodbye_media": ["media/721.mp3"],
     "next_question": "-1",
     "prev_question": "4",
     "media": "https://www.travelordietrying.com/wp-content/uploads/2017/03/pablo-10-3.png"
