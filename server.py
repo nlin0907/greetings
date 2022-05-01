@@ -157,7 +157,7 @@ learn = [
     "hello_media": ["media/arabicwelcome.mp3", "media/Ar-السلام_عليكم.oga"],
     "goodbye_description": ["You can say the Salam greeting when arriving and leaving a gathering."],
     "goodbye": [" “ma'a as-salaama” (goodbye)"],
-    "goodbye_media": ["media/pronunciation_es_adiós.mp3"],
+    "goodbye_media": [],
     "next_question": "3",
     "prev_question": "1",
     "media": "https://scoopempire.com/wp-content/uploads/2018/10/shake_1-1.jpg"
