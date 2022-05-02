@@ -10,6 +10,7 @@ function goToNext(total_points, idx){
     }
 }
 
+//function to show results
 function goToResults(points){
     new_num = info["next_question"]
         $.ajax({
