@@ -10,6 +10,7 @@ function goToNext(total_points, idx){
     }
 }
 
+//results will show the page with the score
 function goToResults(points){
     new_num = info["next_question"]
         $.ajax({
