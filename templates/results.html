@@ -12,13 +12,29 @@
 
 <div class="container">
     <div class="row">
-        <div class="miniheader">Your score is:</div>
+        <div class="miniheader"><button class="button-85" role="button">Your score is:</button></div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg">
+  
+        <!-- filterUnits is required to prevent clipping the blur outside the viewBox -->
+        
+          <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+            
+            <!-- We only want horizontal blurring. x: 100, y: 0 -->
+            
+              <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+          </filter>
+      </svg>
+      
+      <!-- We use a custom attribute to set the text that the pseudo element should display and blur. In this case, we use the first character of the word. -->
+      
+      
+        
     <div class="accent rounded">
     {% if info["points"]|int > 750 %}
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8 header2 text-primary"><span class='passcolor'>HIGH PASS: {{info["points"]}} / 1000</span></div>
+            <div class="col-md-8 header2 text-primary"><span filter-content="S">HIGH PASS: {{info["points"]}} / 1000</span><span class='passcolor'></span></div>
             <div class="col-md-2"></div>
         </div>
         <div class="row">
@@ -26,14 +42,16 @@
                 <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/1PMVNNKVIL8Ig" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
             </div>
             <div class="col-md-6 pad">
-                Please review the following countries:
-                <div id="result_list"></div>
+                <button class="button-63" role="button">Please review the following countries:</button>
+                <br>
+                 <div class="row"><div id="result_list"></div></div>      
+                
             </div>
         </div>
     {% elif info["points"]|int > 500 %}
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8 header2 text-primary"><span class='midcolor'>PASS: {{info["points"]}} / 1000</span></div>
+            <div class="col-md-8 header2 text-primary"><span filter-content="S">PASS: {{info["points"]}} / 1000</span><span class='midcolor'></span></div>
             <div class="col-md-2"></div>
         </div>
         <div class="row">
@@ -41,14 +59,15 @@
                 <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/y8OIynHJhJ5Ys" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
             </div>
             <div class="col-md-6 pad">
-                Please review the following countries:
-                <div id="result_list"></div>
+                <button class="button-63" role="button">Please review the following countries:</button>
+                <br>
+                <div class="row"><div id="result_list"></div></div>      
             </div>
         </div>
     {% else %}
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8 header2 text-primary"><span class='failcolor'>FAIL: {{info["points"]}} / 1000</span></div>
+            <div class="col-md-8 header2 text-primary"><span filter-content="S">FAIL: {{info["points"]}} / 1000</span><span class='failcolor'></span></div>
             <div class="col-md-2"></div>
         </div>
         <div class="row">
@@ -56,8 +75,9 @@
                 <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/AYKv7lXcZSJig" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
             </div>
             <div class="col-md-6 pad">
-                Please review the following countries:
-                <div id="result_list"></div>
+                <button class="button-63" role="button">Please review the following countries:</button>
+                <br>
+                <div class="row"><div id="result_list"></div></div>      
             </div>
         </div>
     {% endif %}
