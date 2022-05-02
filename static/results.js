@@ -1,10 +1,3 @@
-function jump_to_link(current_id){
-    let current_link='/learn/'+current_id
-    window.location.replace(current_link)
-}
-
-
-
 var onpage = []
 $(document).ready(function(){
     console.log(info["points"])
@@ -27,19 +20,13 @@ $(document).ready(function(){
                     console.log('/learn/'+current_id)
                 }
             })
-
-            //let current_link='/learn/'+current_id
-            //let review_link= $("<a href="+current_link+">"+item["relevant_country"]+"</a>")
-            const review_link_button=$('<button class="button-result review_link" id= " ' + current_id + '">'+item["relevant_country"]+"</button>");
+            let current_link='/learn/'+current_id
+            let review_link= $("<a href="+current_link+">"+item["relevant_country"]+"</a>")
             if(onpage.indexOf(item["relevant_country"]) == -1){
                 onpage.push(item["relevant_country"])
-                $("#result_list").append(review_link_button)
-                $("#result_list").append($("<br>"))
+                $("#result_list").append(review_link)
                 $("#result_list").append($("<br>"))
             }
-            $('.review_link').click(function(e){
-                jump_to_link(e.target.id);
-            });
     
             // $("#correct_mark").append()
         })
@@ -62,5 +49,3 @@ $(document).ready(function(){
         
     
 })
-
-
