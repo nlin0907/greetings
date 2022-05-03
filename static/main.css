@@ -25,6 +25,14 @@ body{
     font-size: 14px;
 }
 
+.result_option{
+   margin-top: 5px;
+   padding-top: 5px;
+   color: white;
+   font-size: 14px; 
+   width: 150px;
+}
+
 .failcolor{
     color: #D21404;
 }
@@ -127,6 +135,10 @@ body{
     background-color: #64B5F6;
     color: white;
 
+}
+
+.white{
+    color: white;
 }
 .center{
     text-align:center;
