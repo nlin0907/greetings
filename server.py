@@ -62,7 +62,7 @@ quiz = [
         "answers":  ["Spain", "Yemen", "Japan", "Tibet", "New Zealand"],
         "correct_answer": "Spain",
         "relevant_country": "Spain",
-        "media": "https://letsbuyinspain.com/wp-content/uploads/2016/08/cheek-kiss-greeting-e1450117959995-1024x666.jpg",
+        "media": "/static/media/dos_besos.png",
         "media_type": "image",
         "additions": [],
         "points": "0",
