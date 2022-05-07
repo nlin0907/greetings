@@ -21,7 +21,7 @@ $(document).ready(function(){
                 }
             })
             let current_link='/learn/'+current_id
-            let review_link= $("<button type='button' class='btn-lg btn-primary btn result_option'><a class='white' href="+current_link+">"+item["relevant_country"]+"</a></button>")
+            let review_link= $("<button type='button' class='btn-lg light-gray btn result_option'><a class='black link' href="+current_link+">"+item["relevant_country"]+"</a></button>")
             if(onpage.indexOf(item["relevant_country"]) == -1){
                 onpage.push(item["relevant_country"])
                 $("#result_list").append(review_link)
